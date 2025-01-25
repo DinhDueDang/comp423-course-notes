@@ -17,12 +17,14 @@
 1. Open terminal
 
 2. Create a new directory:  
-    ```bash
+<!-- Idk if you meant to but the bash shows when you do this part of the code. -->
+    ```bash 
     mkdir <name-of-new-project>
     cd <name-of-new-project> 
     ```
 
 2. Initialize a Git Repository:  
+<!-- Same issue here. -->
     ```bash
     git init  
     ```
@@ -58,6 +60,7 @@
 - ```image```: The official Rust Dev Container image which is given by Microsoft
 - ```customizations.vscode.extensions```: Ensures that the Rust extension is downloaded
 - ```postCreateCommand```: runs the ```cargo install cargo-edit``` command after the container is started so the user has access to it if they need
+<!-- I like the setup here very concise and straightforward. -->
 
 ### Step 3: Open the Project in the Dev Container
 
@@ -84,6 +87,7 @@ Within the '''src/main.rs''' file, there will be a basic Hello World! templatte 
     ```
 
 Edit the file such that it says 'Hello COMP423' instead and save it, so that it looks something like this
+<!-- I like how you make them do some work beforehand. -->
 
     ```
     fn main() {
@@ -120,3 +124,5 @@ Edit the file such that it says 'Hello COMP423' instead and save it, so that it 
     ```cargo build``` will only compile the code but not run it. To run it, the developer would need to manually execute the output binary in ```target/debug``` directory.
 
     ```cargo run``` will compile the code and also run it, combining two steps into one. This reduces the hassle of directing to the output binary and manually executing the program.
+
+<!-- Looks good I will try to run it later today. -->
