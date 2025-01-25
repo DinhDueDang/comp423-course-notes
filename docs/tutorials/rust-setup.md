@@ -17,13 +17,13 @@
 1. Open terminal
 
 2. Create a new directory:  
-    ```
+    ```bash
     mkdir <name-of-new-project>
     cd <name-of-new-project> 
     ```
 
 2. Initialize a Git Repository:  
-    ```
+    ```bash
     git init  
     ```
 
@@ -65,5 +65,58 @@ Reopen the container by using the command palette (Ctrl+Shift+P or Cmd+Shift+P o
 
 Once the new Dev Container is setup, close out of the current terminal and open a new terminal tab within VS Code and inputting ```rustc --version``` to see if the container is running the newest version of Rust.
 
-### Step 4: Initialize a new Rust Module
+### Step 4: Hello World in Rust
+1. Create a new binary project:
+    ```bash
+    cargo new hello_world --vcs none  
+    ```
 
+This will create a new directory named hello world without git initialization    
+
+2. Editing the Main file:
+    
+Within the '''src/main.rs''' file, there will be a basic Hello World! templatte that looks something like this
+
+    ```
+    fn main() {
+        println!("Hello, world!");
+    }
+    ```
+
+Edit the file such that it says 'Hello COMP423' instead and save it, so that it looks something like this
+
+    ```
+    fn main() {
+        println!("Hello COMP423");
+    }
+    ```
+
+3. Navigate into the the project and compile using ```cargo build```: 
+
+    ```bash
+    cd hello_world
+    cargo build
+    ```
+
+    This will compile the code and produce an executable binary in the ```target/debug``` directory.
+
+4. Running using gcc style command (optional):
+    ```bash
+    ./target/debug/hello_world    
+    ```
+
+    This manually runs the code in a gcc-style command. But the code can also be ran using cargo as seen below.
+
+5. Run the project using ```cargo run```:
+
+    ```bash
+    cargo run   
+    ```
+
+    This directly runs the project. 
+
+6. ```cargo build``` vs ```cargo run```:
+
+    ```cargo build``` will only compile the code but not run it. To run it, the developer would need to manually execute the output binary in ```target/debug``` directory.
+
+    ```cargo run``` will compile the code and also run it, combining two steps into one. This reduces the hassle of directing to the output binary and manually executing the program.
