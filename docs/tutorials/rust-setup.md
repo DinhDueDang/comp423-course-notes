@@ -19,8 +19,8 @@
 2. Create a new directory:  
 
     ```title="bash"
-    mkdir <name-of-new-project>
-    cd <name-of-new-project> 
+    mkdir my-new-rust-project
+    cd my-new-rust-project
     ```
 
 2. Initialize a Git Repository:  
