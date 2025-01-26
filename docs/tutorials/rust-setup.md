@@ -8,7 +8,7 @@
 1. Git: Used as a tool for modern source code management. Download and install [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git). 
 2. Visual Studio Code (VS Code): An integrated development environment that assists with code writing. Download and install [VS Code](https://code.visualstudio.com/).
 3. GitHub Account: A cloud based platform to host repositories. Create an account or log into [Github](https://github.com/). 
-4. Docker: A tool to helpp automate the deployment of applications. Download and install [Docker](https://www.docker.com/products/docker-desktop/).
+4. Docker: A tool to help automate the deployment of applications. Download and install [Docker](https://www.docker.com/products/docker-desktop/).
 
 ## **Creating a new Dev Container in Rust**
 
@@ -19,8 +19,8 @@
 2. Create a new directory:  
 
     ```title="bash"
-    mkdir <name-of-new-project>
-    cd <name-of-new-project> 
+    mkdir my-new-rust-project
+    cd my-new-rust-project
     ```
 
 2. Initialize a Git Repository:  
@@ -31,16 +31,16 @@
 
 ### Step 2: Create a Dev Container for Rust
 
-1. In VS Code open the <name-of-new-project> directory. You can do this via: File > Open Folder.
+In VS Code open the <name-of-new-project> directory. You can do this via: File > Open Folder.
 
-2. Install "Dev Container" in the extension portion of VS Code
+Install "Dev Container" in the extension portion of VS Code
 
-3. Create a .devcontainer directory in the root of your project with the following file inside of this "hidden" configuration directory:
+Create a .devcontainer directory in the root of your project with the following file inside of this "hidden" configuration directory:
     ```  
     .devcontainer/devcontainer.json
     ```
 
-4. In this devcontainer file we define the configuration for our development environment. Add this to devcontainer.json
+In this devcontainer file we define the configuration for our development environment. Add this to devcontainer.json
 ```title="devcontainer.json"
 {
     "name": "Rust Dev Container",
