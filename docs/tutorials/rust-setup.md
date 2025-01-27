@@ -29,6 +29,14 @@
     git init  
     ```
 
+!!! Note
+    Make sure your default branch is ```main```. Since ```main``` has become an industry wide standard, whereas other conventions like ```master``` has a historical context with oppression
+
+If main is not the default branch use this:
+```title="bash"
+git branch -M main
+```
+
 ### Step 2: Create a Dev Container for Rust
 
 In VS Code open the <name-of-new-project> directory. You can do this via: File > Open Folder.
@@ -123,3 +131,6 @@ Once the new Dev Container is setup, close out of the current terminal and open 
     ```cargo build``` will only compile the code but not run it. To run it, the developer would need to manually execute the output binary in ```target/debug``` directory.
 
     ```cargo run``` will compile the code and also run it, combining two steps into one. This reduces the hassle of directing to the output binary and manually executing the program.
+
+!!! note
+    Both build + ./target/debug/hello_world and run have similar functions, but should be used in different circumstances. If you need to run the same file over and over again then build will be preferrable while if you only need to run the program once then it's better to use run.
